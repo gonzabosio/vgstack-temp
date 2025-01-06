@@ -6,6 +6,8 @@ $ npm install
 
 $ npm install vue-router
 
+$ npm run dev
+
 Initialize a go module if you haven't done it before:
 
 $ cd backend
