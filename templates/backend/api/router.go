@@ -11,7 +11,7 @@ import (
 	"github.com/go-chi/cors"
 )
 
-func newRouter() (*chi.Mux, error) {
+func NewRouter() (*chi.Mux, error) {
 	h, err := handlers.NewHandler()
 	if err != nil {
 		return nil, err
@@ -20,7 +20,7 @@ func newRouter() (*chi.Mux, error) {
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins: []string{os.Getenv("FRONTEND_URL")},
 		AllowedHeaders: []string{"Content-Type", "Accept"},
-		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"},
+		AllowedMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"},
 	}))
 	r.Use(middleware.Logger)
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {

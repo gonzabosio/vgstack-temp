@@ -1,4 +1,4 @@
-Run the following commands to setup your project correctly (change default folder names if needed):
+Run the following commands to setup your project correctly (change default folder names if wanted):
 
 $ cd frontend
 
@@ -16,4 +16,4 @@ $ go mod init github.com/yourgithubacc/my-repository-name
 
 $ go mod tidy
 
-Replace vgstack-cli/templates/backend package imports with the module you created
+Replace 'github.com/gonzabosio/vgstack-cli/templates/backend/...' package imports with the module you created

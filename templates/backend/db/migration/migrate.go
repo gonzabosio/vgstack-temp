@@ -22,7 +22,7 @@ func execQuery(db *sql.DB, queryPath string) error {
 }
 
 func main() {
-	if err := godotenv.Load("backend/.env"); err != nil {
+	if err := godotenv.Load("../backend/.env"); err != nil {
 		log.Fatalf("Failed to load enviroment variables: %v", err)
 	}
 	db, err := sql.Open("postgres", os.Getenv("DB_CONN_STR"))

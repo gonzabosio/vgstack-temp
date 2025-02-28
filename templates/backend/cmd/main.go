@@ -13,10 +13,10 @@ import (
 func main() {
 	// UNCOMMENT .ENV FROM THE GITIGNORE FILE
 
-	if err := godotenv.Load("backend/.env"); err != nil {
+	if err := godotenv.Load("../backend/.env"); err != nil {
 		log.Printf("environment variables loading error: %v\n", err)
 	}
-	r, err := backend.SetupBackendServer()
+	r, err := backend.NewRouter()
 	if err != nil {
 		log.Fatalf("Unable to setup backend server: %v", err)
 	}
